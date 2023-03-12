@@ -52,11 +52,11 @@ if (!defined("WHMCS")) {
 function provisioningmodule_MetaData()
 {
     return array(
-        'DisplayName' => 'Demo Provisioning Module',
+        'DisplayName' => 'BPoS',
         'APIVersion' => '1.1', // Use API Version 1.1
         'RequiresServer' => true, // Set true if module requires a server to work
-        'DefaultNonSSLPort' => '1111', // Default Non-SSL Connection Port
-        'DefaultSSLPort' => '1112', // Default SSL Connection Port
+        'DefaultNonSSLPort' => '80', // Default Non-SSL Connection Port
+        'DefaultSSLPort' => '430', // Default SSL Connection Port
         'ServiceSingleSignOnLabel' => 'Login to Panel as User',
         'AdminSingleSignOnLabel' => 'Login to Panel as Admin',
     );
@@ -85,50 +85,33 @@ function provisioningmodule_MetaData()
  *
  * @return array
  */
-function provisioningmodule_ConfigOptions()
+function bpos_ConfigOptions()
 {
     return array(
-        // a text field type allows for single line text input
-        'Text Field' => array(
+        'name' => array(
             'Type' => 'text',
-            'Size' => '25',
-            'Default' => '1024',
-            'Description' => 'Enter in megabytes',
+            'Size' => '500',
+            'Default' => '',
+            'Description' => 'Enter BPoS Name',
+        ),
+        'url' => array(
+            'Type' => 'text',
+            'Size' => '500',
+            'Default' => '',
+            'Description' => 'Enter BPoS URL',
         ),
         // a password field type allows for masked text input
-        'Password Field' => array(
-            'Type' => 'password',
-            'Size' => '25',
+        'apikey' => array(
+            'Type' => 'text',
+            'Size' => '500',
             'Default' => '',
-            'Description' => 'Enter secret value here',
+            'Description' => 'Enter API Key Secret',
         ),
-        // the yesno field type displays a single checkbox option
-        'Checkbox Field' => array(
-            'Type' => 'yesno',
-            'Description' => 'Tick to enable',
-        ),
-        // the dropdown field type renders a select menu of options
-        'Dropdown Field' => array(
-            'Type' => 'dropdown',
-            'Options' => array(
-                'option1' => 'Display Value 1',
-                'option2' => 'Second Option',
-                'option3' => 'Another Option',
-            ),
-            'Description' => 'Choose one',
-        ),
-        // the radio field type displays a series of radio button options
-        'Radio Field' => array(
-            'Type' => 'radio',
-            'Options' => 'First Option,Second Option,Third Option',
-            'Description' => 'Choose your option!',
-        ),
-        // the textarea field type allows for multi-line text input
-        'Textarea Field' => array(
+        'Note' => array(
             'Type' => 'textarea',
             'Rows' => '3',
             'Cols' => '60',
-            'Description' => 'Freeform multi-line text input field',
+            'Description' => 'Any Note',
         ),
     );
 }

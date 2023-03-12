@@ -1,26 +1,24 @@
 {
-    "name": "whmcs/provisioning-module-sample",
-    "description": "Sample Provisioning Module for WHMCS Billing Automation Platform",
+    "name": "badinansoft/bpos",
+    "description": "BPoS Subscription integration",
     "keywords": [
         "whmcs",
-        "web host automation platform",
+        "bpos",
         "provisioning module",
         "server module"
     ],
-    "homepage": "http://www.whmcs.com/",
+    "homepage": "https://www.bpos.online/",
     "license": "MIT",
     "authors": [
         {
-            "name": "WHMCS Development Team",
-            "email": "development@whmcs.com",
-            "homepage": "http://www.whmcs.com/",
-            "role": "Developer"
+            "name": "Shahab Zebari",
+            "email": "me@shahabzebari.net",
+            "homepage": "https://shahabzebari.net",
+            "role": "Project Manager"
         }
     ],
     "support": {
-        "email": "support@whmcs.com",
-        "forum": "http://forums.whmcs.com/",
-        "wiki": "http://docs.whmcs.com/"
+        "email": "info@badinansoft.com"
     },
     "require-dev": {
         "phpunit/phpunit": "@stable"
